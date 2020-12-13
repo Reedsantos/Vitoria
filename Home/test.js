@@ -26,15 +26,12 @@ $(document).ready(function() {
 });
 
 $("#mood").click(function(){
-    window.location= "../1000reasons/index.html";
+    window.location= "1000reasons/index.html";
 });
 
 $("#schedule").click(function(){
-    window.location= "../clipped-svg-slider-master/page1.html";
+    window.location= "clipped-svg-slider-master/page1.html";
 });
 $("#google").click(function(){
-    window.location= "index.html";
-});
-$("#github").click(function(){
-    window.location = "https://github.com/Reedsantos?tab=repositories/";
+    window.location= "Home/index.html";
 });
