@@ -1,0 +1,493 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #243238;
+  background:url(../img/background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
+
+}
+
+a {
+  color: #607e8d;
+  text-decoration: none;
+}
+
+svg, image {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+
+
+
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin: 10%;
+  text-align: center;
+}
+
+.btn-hover {
+  float: right;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.back {
+  float: left;
+}
+.cd-svg-clipped-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+}
+.cd-svg-clipped-slider .gallery-wrapper,
+.cd-svg-clipped-slider .gallery,
+.cd-svg-clipped-slider .caption {
+  position: relative;
+}
+.cd-svg-clipped-slider .gallery li {
+  /* slider images */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 25%;
+  /* (100% - width)/2 */
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: translateX(75%) scale(0.4);
+      -ms-transform: translateX(75%) scale(0.4);
+          transform: translateX(75%) scale(0.4);
+  cursor: pointer;
+  -webkit-transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, transform .6s ease-in-out;
+  transition: opacity .3s, transform .6s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+.cd-svg-clipped-slider .gallery li.selected {
+  /* slide in the center */
+  position: relative;
+  z-index: 3;
+  height: 0;
+  padding-bottom: 50%;
+  /* width(50%) * image aspect ratio (800/800) */
+  opacity: 1;
+  -webkit-transform: translateX(0) scale(1);
+      -ms-transform: translateX(0) scale(1);
+          transform: translateX(0) scale(1);
+  cursor: auto;
+  padding-left: 49%;
+}
+.cd-svg-clipped-slider .gallery li.left, .cd-svg-clipped-slider .gallery li.left-hide {
+  /* slides on the left */
+  /* .left -> slide visible on the left; .left-hide -> slides hidden on the left */
+  -webkit-transform: translateX(-75%) scale(0.4);
+      -ms-transform: translateX(-75%) scale(0.4);
+          transform: translateX(-75%) scale(0.4);
+}
+.cd-svg-clipped-slider .gallery li.left, .cd-svg-clipped-slider .gallery li.right {
+  /* .right -> slide visible on the right */
+  z-index: 2;
+  opacity: 1;
+}
+.cd-svg-clipped-slider .svg-wrapper {
+  /* using padding Hack to fix bug on IE - svg height not properly calculated */
+  height: 0;
+  padding-bottom: 100%;
+  /* image aspect ratio (800/800) * 100 */
+}
+.cd-svg-clipped-slider svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cd-svg-clipped-slider use.cover-layer {
+  /* dark layer visible on lateral slides */
+  fill: #243238;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: .2;
+}
+.cd-svg-clipped-slider use.cover-layer:hover {
+  opacity: 0;
+}
+.cd-svg-clipped-slider .gallery li.selected use.cover-layer {
+  opacity: 0;
+}
+.cd-svg-clipped-slider .caption {
+  margin: 1em 0;
+  overflow: hidden;
+}
+.cd-svg-clipped-slider .caption li {
+  /* slide titles */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+  padding: 1em 0;
+  -webkit-transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, transform .3s ease-in-out;
+  transition: opacity .3s, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+.cd-svg-clipped-slider .caption li.selected {
+  /* slide visible in the center */
+  z-index: 2;
+  position: relative;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+.cd-svg-clipped-slider .caption li.left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100px);
+      -ms-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+@media only screen and (min-width: 768px) {
+  .cd-svg-clipped-slider .caption li {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-svg-clipped-slider {
+    width: 90%;
+  }
+  .cd-svg-clipped-slider .gallery li {
+    left: 30%;
+    /* (100% - width)/2 */
+    width: 40%;
+    -webkit-transform: translateX(80%) scale(0.4);
+        -ms-transform: translateX(80%) scale(0.4);
+            transform: translateX(80%) scale(0.4);
+  }
+  .cd-svg-clipped-slider .gallery li.selected {
+    padding-bottom: 40%;
+    /* width(40%) * image aspect ratio (800/800) */
+  }
+  .cd-svg-clipped-slider .gallery li.left, .cd-svg-clipped-slider .gallery li.left-hide {
+    -webkit-transform: translateX(-80%) scale(0.4);
+        -ms-transform: translateX(-80%) scale(0.4);
+            transform: translateX(-80%) scale(0.4);
+  }
+}
+
+.cd-svg-clipped-slider .navigation a {
+  /* slider arrows */
+  position: absolute;
+  /* center arrow in the lateral preview */
+  /* left = */
+  /* 25% (.left left value) */
+  /* - 37.5% (.left translateX value converted to container percentage ( 50%(.left width) x 75% (.left translate value) /100) ) */
+  /* + 25% ( .left width (50%)/2 ) */
+  left: 12.5%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
+      -ms-transform: translateX(-50%) translateY(-50%) scale(0.7);
+          transform: translateX(-50%) translateY(-50%) scale(0.7);
+  top: 50%;
+  z-index: 4;
+  pointer-events: none;
+  /* replace text with image */
+  height: 48px;
+  width: 48px;
+  color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  background: url(../img/cd-icon-arrows.svg) no-repeat 0 0;
+}
+.cd-svg-clipped-slider .navigation a.next {
+  left: auto;
+  right: 12.5%;
+  -webkit-transform: translateX(50%) translateY(-50%) scale(0.7);
+      -ms-transform: translateX(50%) translateY(-50%) scale(0.7);
+          transform: translateX(50%) translateY(-50%) scale(0.7);
+  background-position: -48px 0;
+}
+.no-csspointerevents .cd-svg-clipped-slider .navigation a {
+  display: none;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-svg-clipped-slider .navigation a {
+    left: 18%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+  .cd-svg-clipped-slider .navigation a.next {
+    left: auto;
+    right: 18%;
+    -webkit-transform: translateX(50%) translateY(-50%);
+        -ms-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
+  }
+}
+
+.cd-svg-clipped-slider.prev-hidden .navigation a.prev,
+.cd-svg-clipped-slider.next-hidden .navigation a.next {
+  /* hide prev/next arrow if first/last slide */
+  opacity: 0;
+}
+
+.cd-svg-clipped-slider .navigation a.prev.active {
+  /* scale up prev arrow on active */
+  -webkit-animation: cd-click-prev .3s;
+          animation: cd-click-prev .3s;
+}
+
+.cd-svg-clipped-slider .navigation a.next.active {
+  /* scale up next arrow on active */
+  -webkit-animation: cd-click-next .3s;
+          animation: cd-click-next .3s;
+}
+
+@-webkit-keyframes cd-click-prev {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+            transform: translateX(-50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+
+@keyframes cd-click-prev {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+            transform: translateX(-50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+@-webkit-keyframes cd-click-next {
+  0% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(0.8);
+            transform: translateX(50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(1);
+            transform: translateX(50%) translateY(-50%) scale(1);
+  }
+}
+@keyframes cd-click-next {
+  0% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(0.8);
+            transform: translateX(50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(1);
+            transform: translateX(50%) translateY(-50%) scale(1);
+  }
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 25px;
+  margin-left: -20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.reasonToggle{
+  margin-left: 40px;
+}
+
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  max-height: 360px;
+  margin-left: -300px;
+  margin-top: -180px;
+  border: 2px solid #FFF;
+  background: #FFF;
+  z-index: 1002;
+  overflow: visible;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 3px;
+  background: #222222;
+  font-size: 31px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+.boxclose:before {
+  content: "×";
+}
+
+#fade:hover ~ #boxclose {
+  display:none;
+}
+
+.test:hover ~ .test2 {
+  display: none;
+}
+
+
+@media only screen and (min-width: 2050px) {
+  .switch{
+  margin-top: 25px;
+  margin-left: -525px;
+  }
+  .reasonToggle{
+    margin-left: 30px;
+}
+}
