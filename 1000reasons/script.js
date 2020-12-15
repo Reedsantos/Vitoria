@@ -75,7 +75,30 @@ function generateReasons() {
         'The way your body curves is so hot ;)',
         'Best style out of anyone I know.',
         'Smartest girl Ive ever met.',
-        '"So long as men can breathe or eyes can see, So long lives this, and this gives life to thee." -William Shakespeare'
+        '"So long as men can breathe or eyes can see, So long lives this, and this gives life to thee." -William Shakespeare',
+        'Your eyes twinkle when you smile.',
+        'Were perfect together.',
+        'You make me feel better.',
+        'I love waking up next to you :)',
+        'I love when your hair gets curly and messy in the morning.',
+        'I love to see your hair messed up after we "do it" ;)',
+        'Youve got the whole package. Big titties, cute as can be, and smart as hell.',
+        'Be with me :)',
+        'Life doesnt feel normal without you.',
+        'Once I got to know you, I never wanted to know anyone else.',
+        'Im myself when Im around you.',
+        '"Where there is love there is life." -Mahatma Gandhi',
+        'I wont be able to fix all your problems, but I promise you dont have to face them alone.',
+        'The best feeling is to love and be loved back.',
+        'Your voice is my favorite sound.',
+        'Youre all my heart ever talks about.',
+        'I love you dummy :)',
+        'My heart will always be with you.',
+        'Just lie down on my chest and hear my heartbeat.',
+        'When I say "I love you" I dont say it out of habit, I say that because you are my life.',
+        'Just amile and say you love me :)',
+        'I see you in my dreams, V :)',
+
 
 
     ]
