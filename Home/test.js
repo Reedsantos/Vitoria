@@ -33,5 +33,5 @@ $("#schedule").click(function(){
     window.location= "album/page1.html";
 });
 $("#google").click(function(){
-    window.location= "Home/index.html";
+    window.location= "index.html";
 });
