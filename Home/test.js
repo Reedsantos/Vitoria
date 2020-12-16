@@ -30,7 +30,7 @@ $("#mood").click(function(){
 });
 
 $("#schedule").click(function(){
-    window.location= "clipped-svg-slider-master/page1.html";
+    window.location= "album/page1.html";
 });
 $("#google").click(function(){
     window.location= "Home/index.html";
