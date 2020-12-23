@@ -82,7 +82,7 @@ function generateReasons() {
         'I love waking up next to you :)',
         'I love when your hair gets curly and messy in the morning.',
         'I love to see your hair messed up after we "do it" ;)',
-        'Youve got the whole package. Big titties, cute as can be, and smart as hell.',
+        'Youve got the whole package. Youre so fucking funny, cute as can be, and smart as hell.',
         'Be with me :)',
         'Life doesnt feel normal without you.',
         'Once I got to know you, I never wanted to know anyone else.',
